@@ -1,5 +1,8 @@
 # keyrehack
-Keyrehack enables you to change key denifition for windows. This is implemented by pure go.
+Keyrehack enables you to change key denifitions for Windows. This is implemented in pure go, and directly calls win32 api.
 
-# Future
-(Preparing...)
+## Feature
+(Coming soon...)
+
+## Future
+(Coming soon...)
