@@ -26,7 +26,6 @@ type POINT struct {
 	Y int32
 }
 
-// Structure for an input event.
 type INPUT struct {
 	Type uint32     // Type of the input event
 	Ki   KEYBDINPUT // Keyboard input
@@ -34,7 +33,6 @@ type INPUT struct {
 	Hi   struct{}   // Hardware input (not used here)
 }
 
-// Structure for key input event.
 type KEYBDINPUT struct {
 	Vk          uint16  // Virtual key code
 	Scan        uint16  // Hardware scan code
@@ -45,11 +43,3 @@ type KEYBDINPUT struct {
 
 // https://learn.microsoft.com/ja-jp/windows/win32/api/winuser/ns-winuser-keybdinput
 type DwFlags uint32
-
-const (
-	KEYEVENTF_KEYDOWN     DwFlags = 0x0000
-	KEYEVENTF_EXTENDEDKEY DwFlags = 0x0001
-	KEYEVENTF_KEYUP       DwFlags = 0x0002
-	KEYEVENTF_SCANCODE    DwFlags = 0x0008
-	KEYEVENTF_UNICODE     DwFlags = 0x0004
-)

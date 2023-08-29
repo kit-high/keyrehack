@@ -14,6 +14,12 @@ type CombinationReplacer struct {
 }
 
 func NewCombination(arr []ReplaceKey) *CombinationReplacer {
+	for _, key := range arr {
+		if len(*(key.Source.Press)) != 1 {
+			panic("Source.Press must have only one key")
+		}
+	}
+
 	modUser32, _ := syscall.LoadDLL("user32.dll")
 	procgetAsyncKeyState, _ := modUser32.FindProc("GetAsyncKeyState")
 	procSendInput, _ := modUser32.FindProc("SendInput")

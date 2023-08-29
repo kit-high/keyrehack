@@ -59,6 +59,10 @@ func onReady() {
 		for {
 			select {
 			case <-setting1.ClickedCh:
+				unckeckAllSetings()
+				setting1.Check()
+				keyboard.UnsetHack()
+				go keyboard.SetHack(simpleReplace1, combinationReplace1)
 			case <-reset.ClickedCh:
 				unckeckAllSetings()
 				setting1.Check()
