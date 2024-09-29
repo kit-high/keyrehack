@@ -6,7 +6,10 @@ Keyrehack enables you to change key definitions for Windows. This is implemented
 (Coming soon...)
 
 ## Getting Started
-(Coming soon...)
+- Windows
+```
+go build -ldflags -H=windowsgui
+```
 
 ## Future Plans
 ・Changing Registory Function.
